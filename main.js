@@ -2,6 +2,7 @@ import Pristine from "pristinejs";
 import { calculatePremium } from "./calculation";
 import { getAge } from "./date";
 import { render as renderResultPage } from "./result";
+import { toggleResultPage } from "./utilities";
 import { createCustomValidation } from "./validations";
 
 const selectors = {
@@ -14,17 +15,7 @@ const selectors = {
   income: ".js-income-input",
 };
 
-const classNames = {
-  showResult: "show-result",
-};
-
 let pristine = undefined;
-
-const toggleResultPage = () => {
-  const widgetEl = document.querySelector(selectors.widget);
-
-  widgetEl.classList.toggle(classNames.showResult);
-};
 
 const validateForm = (e) => {
   e.preventDefault();
