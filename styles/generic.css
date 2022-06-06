@@ -1,0 +1,69 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #2c3e50;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 16px 32px;
+}
+
+/**
+ * FORMS
+ */
+label {
+  display: block;
+  margin-bottom: var(--spacing-unit);
+}
+
+select {
+  -webkit-appearance: none;
+  border: solid 2px #e9e9e9;
+  cursor: pointer;
+  height: 40px;
+  padding-left: var(--spacing-unit);
+  width: 100%;
+}
+select:focus,
+select:hover {
+  outline: 0;
+}
+
+input {
+  -webkit-appearance: none;
+  border: solid 2px #e9e9e9;
+  padding: 0 var(--spacing-unit);
+  height: 40px;
+  width: 100%;
+}
+input:focus,
+input:hover {
+  border-color: #000;
+  outline: 0;
+}
+
+.has-error input,
+.has-error select {
+  border-color: #fa6b7b;
+}
+
+/**
+ * Button
+ */
+.btn {
+  border: 0;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+  height: 40px;
+  width: auto;
+}

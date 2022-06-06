@@ -1,0 +1,8 @@
+.widget-result {
+  background-color: #fff;
+  display: none;
+  padding: calc(var(--spacing-unit) * 4);
+}
+.show-result .widget-result {
+  display: block;
+}

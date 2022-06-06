@@ -1,0 +1,49 @@
+.widget-input {
+  padding: calc(var(--spacing-unit) * 4);
+  padding-top: 0;
+}
+
+.show-result .widget-input {
+  display: none;
+}
+
+.widget-form {
+  align-items: flex-end;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.widget-form fieldset {
+  padding-right: calc(var(--spacing-unit) * 4);
+}
+
+.occupation {
+  flex-shrink: 0;
+  width: 30%;
+}
+.dob {
+  flex-shrink: 0;
+  width: 20%;
+}
+.income {
+  flex-shrink: 0;
+  width: 20%;
+}
+
+.submit {
+  flex-grow: 1;
+}
+
+/**
+ * Errors
+ */
+.errors {
+  width: 100%;
+}
+.error {
+  background-color: #fa6b7b;
+  color: #fff;
+  font-size: 14px;
+  margin-top: var(--spacing-unit);
+  padding: var(--spacing-unit);
+}

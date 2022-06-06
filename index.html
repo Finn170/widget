@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+      integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./styles/all.css" />
+  </head>
+  <body>
+    <div class="container">
+      <section class="widget js-widget">
+        <header class="widget-header">
+          <h1>Widget</h1>
+        </header>
+        <div class="widget-input js-user-input">
+          <form class="widget-form js-form">
+            <fieldset class="widget-fieldset occupation">
+              <label for="occupation">Occupation</label>
+              <select
+                name="occupation"
+                id="occupation"
+                class="js-occupation-select"
+                required
+                data-pristine-required-message="Please choose an occupation"
+              >
+                <option value="">Select an occupation</option>
+                <option value="fe">Front-end developer</option>
+                <option value="be">Back-end developer</option>
+                <option value="gd">Graphic designer</option>
+                <option value="vd">Visual designer</option>
+              </select>
+            </fieldset>
+            <fieldset class="widget-fieldset dob">
+              <label for="dob">Date of birth</label>
+              <input
+                id="dob"
+                type="text"
+                class="js-dob-input"
+                required
+                data-pristine-date-format
+                data-pristine-date-is-valid
+                data-pristine-age-between-18-67
+                data-pristine-required-message="Please set your date of birth"
+              />
+            </fieldset>
+            <fieldset class="widget-fieldset income">
+              <label for="income">Yearly income</label>
+              <input
+                id="income"
+                type="number"
+                class="js-income-input"
+                min="5000"
+                max="400000"
+                required
+                data-pristine-required-message="Please set your yearly income"
+                data-pristine-min-message="Yearly income should be more than 5000"
+                data-pristine-max-message="Yearly income should be less than 400000"
+              />
+            </fieldset>
+            <button type="submit" class="btn submit">Submit</button>
+
+            <div class="errors js-errors"></div>
+          </form>
+        </div>
+        <div class="widget-result js-result">dsahjkda</div>
+      </section>
+    </div>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
