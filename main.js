@@ -45,7 +45,7 @@ const validateForm = (e) => {
     yearlyIncome: incomeEl.value,
   };
 
-  renderResultPage(formData);
+  renderResultPage(formData, calculatePremium(formData));
   toggleResultPage();
 };
 
@@ -57,9 +57,7 @@ const bindings = (form) => {
   form.addEventListener("submit", validateForm);
 };
 
-/**
- * Initialize the widget
- */
+// Initialize the widget
 const init = () => {
   const form = document.querySelector(selectors.form);
   createCustomValidation(Pristine);

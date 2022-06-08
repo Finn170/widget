@@ -41,11 +41,7 @@ const isValidDate = (pristine) => {
 const ageBetween18and67 = (pristine) => {
   pristine.addValidator(
     "age-between-18-67",
-    (value) => {
-      const age = getAge(value);
-
-      console.log(age);
-    },
+    (value) => getAge(value) >= 18 && getAge(value) <= 67,
     "Your age should be between 18 and 67"
   );
 };
