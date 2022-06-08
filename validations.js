@@ -1,6 +1,10 @@
 import moment from "moment";
 import { getAge } from "./date";
 
+/**
+ * Validate on date format
+ * @param {*} pristine
+ */
 const dateFormatValidation = (pristine) => {
   pristine.addValidator(
     "date-format",
@@ -17,6 +21,10 @@ const dateFormatValidation = (pristine) => {
   );
 };
 
+/**
+ * Is the date a valid date
+ * @param {*} pristine
+ */
 const isValidDate = (pristine) => {
   pristine.addValidator(
     "date-is-valid",
@@ -25,6 +33,11 @@ const isValidDate = (pristine) => {
   );
 };
 
+/**
+ * Is the age higher or equal to 18
+ * Is the age lower or equal to 67
+ * @param {*} pristine
+ */
 const ageBetween18and67 = (pristine) => {
   pristine.addValidator(
     "age-between-18-67",
@@ -37,6 +50,10 @@ const ageBetween18and67 = (pristine) => {
   );
 };
 
+/**
+ * Create custom validations
+ * @param {*} pristine
+ */
 export const createCustomValidation = (pristine) => {
   dateFormatValidation(pristine);
   isValidDate(pristine);

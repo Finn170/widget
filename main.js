@@ -17,6 +17,11 @@ const selectors = {
 
 let pristine = undefined;
 
+/**
+ * Validate the form on submit
+ * @param {*} e
+ * @returns
+ */
 const validateForm = (e) => {
   e.preventDefault();
 
@@ -44,10 +49,17 @@ const validateForm = (e) => {
   toggleResultPage();
 };
 
+/**
+ * Bind submit to the form
+ * @param {*} form
+ */
 const bindings = (form) => {
   form.addEventListener("submit", validateForm);
 };
 
+/**
+ * Initialize the widget
+ */
 const init = () => {
   const form = document.querySelector(selectors.form);
   createCustomValidation(Pristine);

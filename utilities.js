@@ -6,6 +6,9 @@ const classNames = {
   showResult: "show-result",
 };
 
+/**
+ * Show or hide the result page
+ */
 export const toggleResultPage = () => {
   const widgetEl = document.querySelector(selectors.widget);
 
