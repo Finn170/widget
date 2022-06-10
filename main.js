@@ -4,6 +4,7 @@ import { getAge } from "./date";
 import { render as renderResultPage } from "./result";
 import { toggleResultPage } from "./utilities";
 import { createCustomValidation } from "./validations";
+import { render as errors } from "./errors";
 
 const selectors = {
   widget: ".js-widget",
@@ -29,8 +30,7 @@ const validateForm = (e) => {
   var isValid = pristine.validate();
 
   if (!isValid) {
-    console.log(pristine.getErrors());
-
+    errors(pristine.getErrors());
     return;
   }
 
